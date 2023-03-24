@@ -26,8 +26,8 @@ jobs:
 
     - name: Print dir
       run: ls -l ${GITHUB_WORKSPACE}
-      
+
     - uses: actions/upload-artifact@v3
       with:
         name: portfolio
-        path: ${GITHUB_WORKSPACE}/portfolio
+        path: ./portfolio
