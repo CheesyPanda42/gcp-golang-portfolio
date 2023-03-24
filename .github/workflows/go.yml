@@ -24,6 +24,9 @@ jobs:
     - name: Build
       run: go build -o ${GITHUB_WORKSPACE}/portfolio/portfolio -v ${GITHUB_WORKSPACE}
 
+    - name: Print dir
+      run: ls -l ${GITHUB_WORKSPACE}
+      
     - uses: actions/upload-artifact@v3
       with:
         name: portfolio
