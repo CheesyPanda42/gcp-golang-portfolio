@@ -22,7 +22,7 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      run: go build -o ${GITHUB_WORKSPACE}/portfolio -v ${GITHUB_WORKSPACE}
+      run: go build -o ${GITHUB_WORKSPACE}/portfolio/portfolio -v ${GITHUB_WORKSPACE}
 
     - uses: actions/upload-artifact@v3
       with:
