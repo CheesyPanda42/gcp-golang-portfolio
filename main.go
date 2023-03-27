@@ -6,13 +6,11 @@ import (
 
 func main() {
 	router := gin.Default()
-
-	router.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello, World!")
-	})
-
+	router.LoadHTMLGlob("html/*")
+	router.Static("/assets", "./assets")
+	router.Static("/css", "./css")
 	// Render index.html
-	router.GET("/index", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		c.HTML(200, "index.html", gin.H{
 			"title": "Main website",
 		})
