@@ -11,5 +11,12 @@ func main() {
 		c.String(200, "Hello, World!")
 	})
 
+	// Render index.html
+	router.GET("/index", func(c *gin.Context) {
+		c.HTML(200, "index.html", gin.H{
+			"title": "Main website",
+		})
+	})
+
 	router.Run(":8080")
 }
