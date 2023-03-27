@@ -1,6 +1,8 @@
 FROM scratch
 WORKDIR /app
-COPY portfolio /app/portfolio
+COPY . /app
+EXPOSE 8080
+ENV GIN_MODE release
 CMD ["/app/portfolio"]
 
 # Build app and copy
