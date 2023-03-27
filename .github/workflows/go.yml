@@ -21,6 +21,9 @@ jobs:
       with:
         go-version: 1.19
 
+    - name: Clean
+      run: rm -rf ${GITHUB_WORKSPACE}/portfolio
+
     - name: Build
       run: go build -o ${GITHUB_WORKSPACE}/portfolio/portfolio -v ${GITHUB_WORKSPACE}
 
